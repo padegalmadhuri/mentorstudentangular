@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row ">
+        <div class="col-lg-12 " style="margin-top: 5vh;">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1>Add Mentor</h1>
+                </div>
+            </div>
+            <br>
+            <form [formGroup]="mentor">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <label for=""> Name</label>
+                        <input type="text" class="form-control search" id="name" formControlName="name" placeholder="EnterName">
+                        <br>
+                    </div>
+                    <div class="col-lg-6">
+                        <label for="">Age</label>
+                        <input type="number" class="form-control search" id="age" formControlName="age" placeholder="Enter age">
+                        <br>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <label for="">Phone</label>
+                        <input type="text" class="form-control search" formControlName="phoneNo" placeholder="Enter phoneNo">
+
+                        <br>
+                    </div>
+                    <div class="col-lg-6">
+                        <label for="">role</label>
+                        <input type="text" class="form-control search" id="role" formControlName="role" placeholder="Enter role">
+                        <br>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <input type="submit" class="btn btn-primary " value="Add Mentor" (click)="addMentor()" >
+                    </div>
+                </div>
+            </form>
+            <br>
+
+        </div>
+    </div>
+</div>

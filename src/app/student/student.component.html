@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row ">
+        <div class="col-lg-12 " style="margin-top: 5vh;">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1>Add Student</h1>
+                </div>
+            </div>
+            <br>
+            <form [formGroup]="student">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <label for=""> Name</label>
+                        <input type="text" class="form-control search" id="name" formControlName="name" placeholder="EnterName">
+                        <br>
+                    </div>
+                    <div class="col-lg-6">
+                        <label for="">Batch No</label>
+                        <input type="number" class="form-control search" id="batchNo" formControlName="batchNo" placeholder="Enter batchNo">
+                        <br>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <label for="">Phone</label>
+                        <input type="text" class="form-control search" formControlName="phoneNo" placeholder="Enter phoneNo">
+
+                        <br>
+                    </div>
+                    <div class="col-lg-6">
+                        <label for="">Course</label>
+                        <input type="text" class="form-control search" id="course" formControlName="course" placeholder="Enter course">
+                        <br>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <input type="submit" class="btn btn-primary " value="Add Student" (click)="addStudent()" >
+                    </div>
+                </div>
+            </form>
+            <br>
+
+        </div>
+    </div>
+</div>
