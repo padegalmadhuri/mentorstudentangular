@@ -3,7 +3,7 @@
         <div class="col-lg-12">
             <select class="custom-select custom-select-lg mb-3">
                 <option selected>Select a mentor</option>
-                <option *ngFor="let item of ser.mentor" [value]="item.id" (click)="change(item.id,item.name,true)">{{item.name}}</option>
+                <option *ngFor="let item of ser.mentor" [value]="item['_id']" (click)="change(item['_id'],item.name,true)">{{item.name}}</option>
               </select>
         </div>
     </div>
@@ -13,7 +13,7 @@
             <div class="col-lg-4" *ngIf="item.mentor=='' && item.mentor.name!=mentorName">
                 <ng-container>
                     <div class="card bg-light mb-3" style="max-width: 18rem;">
-                        <div class="card-header"><input type="checkbox" [value]="item.id" (change)="onCheckChange($event)"> &nbsp;&nbsp;&nbsp;{{item.name}}</div>
+                        <div class="card-header"><input type="checkbox" [value]="item['_id']" (change)="onCheckChange($event)"> &nbsp;&nbsp;&nbsp;{{item.name}}</div>
                         <div class="card-body">
                             <h5 class="card-title">Batch:{{item.batchNo}}</h5>
                             <p class="card-text">Phone Number :{{item.phoneNo}}</p>
@@ -27,7 +27,7 @@
 
     <div class="row">
         <div class="col-lg-12 text-right">
-            <input type="submit" class="btn btn-primary" value="Assign" (click)="assign()" [disabled]="!assignValues.valid">
+            <input type="submit" class="btn btn-primary" value="Assign" (click)="assign()">
         </div>
     </div>
 </div>

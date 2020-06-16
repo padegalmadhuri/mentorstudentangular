@@ -4,7 +4,7 @@
 
 export const environment = {
   production: true,
-  apiURL:"https://mentorstudent.herokuapp.com/"
+  urlprod:"https://mentorstudent1.herokuapp.com"
 };
 
 /*

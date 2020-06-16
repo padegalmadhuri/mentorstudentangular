@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { StudentComponent } from './student/student.component';
 import { MentorComponent } from './mentor/mentor.component';
 import {ReactiveFormsModule} from '@angular/forms';
-
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AssignComponent } from './assign/assign.component';
 import { ListComponent } from './list/list.component';
@@ -23,12 +23,12 @@ import { ListComponent } from './list/list.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    
+
     BrowserAnimationsModule,
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy,useClass:HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
